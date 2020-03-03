@@ -1,0 +1,15 @@
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s,transform .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+  transform: translate(0,-10px);
+}
+@keyframes spotLight {
+  0%{
+    transform: scale(.8);
+  }
+  100%{
+    transform: scale(1.1);
+  }
+}

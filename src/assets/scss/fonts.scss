@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('~@/assets/fonts/Roboto-Regular.ttf');
+}
+
+// font
+@mixin Roboto-text($font-size:16px, $font-weight:bold) {
+  font-family: Roboto-Regular;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+// font
+@mixin text($font-size:16px, $font-weight:bold) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

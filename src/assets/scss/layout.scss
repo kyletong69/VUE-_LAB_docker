@@ -1,0 +1,54 @@
+@mixin imgObjectFit($width) {
+  figure{
+    width: $width;
+    height: $width;
+    margin: 0 10px 0 0;
+    flex-shrink: 0;
+    img{
+      object-fit: cover;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+@mixin nowrap {
+  overflow : hidden;
+  text-overflow : ellipsis;
+  white-space : nowrap;
+}
+@mixin imgRectangle($width, $height){
+  figure{
+    width: $width;
+    height: $height;
+    margin: 0 10px 0 0;
+    flex-shrink: 0;
+    img{
+      object-fit: cover;
+      vertical-align: middle;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+@mixin titleLine($left, $color) {
+  &::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: $color;
+    left: $left;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+@mixin subTitle {
+  color: #399FFF;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: bold;
+}

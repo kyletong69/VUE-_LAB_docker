@@ -1,0 +1,56 @@
+@import "color.scss";
+@mixin separationLine($width, $color:$white-20) {
+	&::after {
+		content: '';
+		display:block;
+		margin:0 auto;
+		width: $width;
+		border-bottom:5px solid $color;
+	}
+}
+
+@mixin Line($width, $border-width, $color:$white-20) {
+	&::after {
+		content: '';
+		display:block;
+		margin:0 auto;
+		width: $width;
+		border-radius: 10px;
+		border: $border-width solid $color;
+	}
+}
+
+@mixin btn($width, $height, $radius) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: $width;
+	height: $height;
+	border-radius: $radius;
+	cursor: pointer;
+}
+
+@mixin arrow($width, $radius, $color:$white) {
+	display: inline-block;
+	width: $width;
+	height: $width;
+	transform: rotate($radius);
+	border-right: 6px solid $color;
+	border-top: 6px solid $color;
+}
+
+@mixin triangle($width, $height, $color) {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: $height 0 $height $width;
+	border-color: transparent transparent transparent $color;
+}
+
+@mixin circle($width, $border, $color) {
+	width: $width;
+	height: $width;
+	border-radius: 50%;
+	border: $border solid $color;
+}
